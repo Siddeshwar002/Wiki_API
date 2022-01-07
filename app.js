@@ -15,13 +15,14 @@ app.use(bodyParser.urlencoded({extended: true}));/*body-parser*/
 
 mongoose.connect("mongodb://localhost:27017/wikiDB",{useNewUrlParser:true,useUnifiedTopology:true});
 
-// Create a Shema / Table / Collection
+// Create a Shema 
 const articlShcema = {
     title:String,
     content:String
 };
 
-// Create a Model 
+// Create a Model / Table / Collection
+// articles is the Table Name
 Article = mongoose.model("article",articlShcema);
 
 
